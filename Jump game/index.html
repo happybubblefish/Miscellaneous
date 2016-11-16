@@ -4,12 +4,18 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/style.css">
         <script src="js/angular.js"></script>
+        <script src="js/jquery-1.12.4.min.js"></script>
         <script src="js/script.js"></script>
     </head>
-    <body ng-app="myApp">
-       <div ng-controller="myCtrl">
-           <input type="text" name="text" ng-model="name">
-           {{ name }}
+    <body ng-app="jumpApp">
+       <div ng-controller="jumpCtrl">
+           <span ng-repeat="num in numbers track by $index">{{num}}&nbsp;&nbsp;&nbsp;</span><br/>
+           Your answer:
+           <input type="radio" ng-model="answer" ng-disabled="checked" value="true" ng-change="getAnswer(answer)">True
+           <input type="radio" ng-model="answer" ng-disabled="checked" value="false" ng-change="getAnswer(answer)">False<br/>
+           Score: {{score}}<br/>
+           <button id="btn-again">Play again</button>
+           <button id="btn-reset" ng-click="reset()">Reset game</button>
        </div>
     </body>
 </html>
