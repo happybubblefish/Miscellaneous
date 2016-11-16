@@ -8,8 +8,16 @@
         <script src="js/script.js"></script>
     </head>
     <body ng-app="jumpApp">
-       <div ng-controller="jumpCtrl">
-          
+       <div class="container" ng-controller="jumpCtrl">
+           <h3>Instructions:</h3>
+           <p>Given a random generated array. Check whether there is a way to jump from start to the end.</p>
+           <p>For example, given 2 4 1 3 0 and start from 2. There are three ways to jump to the end: </p>
+           <p>2->1->3 or 2->4 or 2->4->1->3.</p>
+           <h3>Rules:</h3>
+           <p>There are three different levels: easy level has 5 numbers, noraml level has 10 numbers, hard level has 15 numbers.</p>
+           <p>Correct anwser will get 5 points, wrong answer will lose 2 points</p>
+           <p>User can click "Play again" button to play next game and click "Reset game" button to start over.</p>
+           <h3>Enjoy game:</h3>
            Please choose game level:
            <input type="radio" ng-model="level" ng-disabled="checkedLevel" value="easy" ng-change="chooseLevel(level)"/>Easy
            <input type="radio" ng-model="level" ng-disabled="checkedLevel" value="normal" ng-change="chooseLevel(level)"/>normal
