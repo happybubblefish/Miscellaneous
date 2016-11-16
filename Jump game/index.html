@@ -9,9 +9,10 @@
     </head>
     <body ng-app="jumpApp">
        <div class="container" ng-controller="jumpCtrl">
+           <h1>Jump game</h1>
            <h3>Instructions:</h3>
-           <p>Given a random generated array. Check whether there is a way to jump from start to the end.</p>
-           <p>For example, given 2 4 1 3 0 and start from 2. There are three ways to jump to the end: </p>
+           <p>Given a random generated array in which index starts from 0 instead of 1. By adding current element's value to current element's index to check whether there is a way to jump from start to the end.</p>
+           <p>For example, given 2 4 1 3 0 and start from 2 whose index is 0 and value is 2. There are three ways to jump to the end: </p>
            <p>2->1->3 or 2->4 or 2->4->1->3.</p>
            <h3>Rules:</h3>
            <p>There are three different levels: easy level has 5 numbers, noraml level has 10 numbers, hard level has 15 numbers.</p>
