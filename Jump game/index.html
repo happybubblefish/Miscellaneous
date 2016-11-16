@@ -9,12 +9,18 @@
     </head>
     <body ng-app="jumpApp">
        <div ng-controller="jumpCtrl">
+          
+           Please choose game level:
+           <input type="radio" ng-model="level" ng-disabled="checkedLevel" value="easy" ng-change="chooseLevel(level)"/>Easy
+           <input type="radio" ng-model="level" ng-disabled="checkedLevel" value="normal" ng-change="chooseLevel(level)"/>normal
+           <input type="radio" ng-model="level" ng-disabled="checkedLevel" value="hard" ng-change="chooseLevel(level)"/>hard<br/>
+          
            <span ng-repeat="num in numbers track by $index">{{num}}&nbsp;&nbsp;&nbsp;</span><br/>
            Your answer:
-           <input type="radio" ng-model="answer" ng-disabled="checked" value="true" ng-change="getAnswer(answer)">True
-           <input type="radio" ng-model="answer" ng-disabled="checked" value="false" ng-change="getAnswer(answer)">False<br/>
+           <input type="radio" ng-model="answer" ng-checked="checkedAnswer" ng-disabled="disableCheckedAnswer" value="true" ng-change="getAnswer(answer)">True
+           <input type="radio" ng-model="answer" ng-checked="checkedAnswer"  ng-disabled="disableCheckedAnswer" value="false" ng-change="getAnswer(answer)">False&nbsp;&nbsp;&nbsp;<span id="output">{{output}}</span><br/>
            Score: {{score}}<br/>
-           <button id="btn-again">Play again</button>
+           <button id="btn-again" ng-click="playAgain()">Play again</button>
            <button id="btn-reset" ng-click="reset()">Reset game</button>
        </div>
     </body>
