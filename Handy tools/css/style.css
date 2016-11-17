@@ -1,0 +1,26 @@
+.container{
+    width: 1140px;
+    margin: 0 auto;
+}
+
+#title{
+    margin-bottom: 10px;
+}
+
+#version{
+    text-align: center;
+    margin-top: 0;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+#palindrom-btn{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#flag-btn{
+    margin-top: 10px;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Handy tools</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/angular.js"></script>
+        <script src="js/jquery-1.12.4.min.js"></script>
+        <script src="js/script.js"></script>
+    </head>
+    <body ng-app="toolApp">
+       <h1 id="title">Handy tools</h1>
+       <div id="version">
+           <span>V1.0</span>
+       </div>
+        <section class="container" ng-controller="palindromCtrl">
+           <h2>Check palindrome</h2>
+            Your input:<br>
+            <textarea name="palindrome" ng-model="palindrome" cols="159" rows="5"></textarea><br>
+            <div id="flag-btn">
+                <input type="radio" ng-model="flag" value="sensitive" ng-click="chooseFlag()">Case sensitive
+                <input type="radio" ng-model="flag" value="insensitive" ng-click="chooseFlag()">Case insensitive<br>
+            </div>
+            <div id="palindrom-btn">
+                <button ng-click="checkPalindrome()" ng-disabled="disabled">Check</button>
+                <button ng-click="reset()">Reset</button><br>
+            </div>
+            <div id="output">
+                <span ng-show="output != null && output">Yes, your input is palindrome!</span>
+                <span ng-show="output != null && !output">No, your input is NOT palindrome...</span>
+            </div>
+        </section>
+        
+        
+        <hr>
+    </body>
+</html>

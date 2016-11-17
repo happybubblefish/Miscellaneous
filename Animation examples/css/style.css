@@ -1,0 +1,18 @@
+
+.trigger{
+    height: 50px;
+    width: 50px;
+    background-color: #ddd;
+    border: 5px #ccc solid;
+}
+.box{
+    height: 50px;
+    width: 50px;
+    background-color: pink;
+    pointer-events: none;
+    transition: transform 300ms ease-in-out;
+}
+
+.trigger.clicked .box{
+    transform: translate(50px, 50px) rotate(45deg);
+}
