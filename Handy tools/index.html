@@ -3,6 +3,9 @@
     <head>
         <meta charset="utf-8">
         <title>Handy tools</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600" rel="stylesheet">
+        <link rel="stylesheet" href="css/weather-icons.min.css">
+        <link rel="stylesheet" href="css/weather-icons-wind.min.css">
         <link rel="stylesheet" href="css/style.css">
         <script src="js/angular.js"></script>
         <script src="js/jquery-1.12.4.min.js"></script>
@@ -25,13 +28,44 @@
                 <button ng-click="checkPalindrome()" ng-disabled="disabled">Check</button>
                 <button ng-click="reset()">Reset</button><br>
             </div>
-            <div id="output">
+            <div id="palindrome-output">
                 <span ng-show="output != null && output">Yes, your input is palindrome!</span>
                 <span ng-show="output != null && !output">No, your input is NOT palindrome...</span>
             </div>
         </section>
-        
-        
+        <div class="clearfix"></div>
+        <hr>
+        <section class="container" ng-controller="weatherCtrl">
+           <h2>Forecast</h2>
+           <div id="weather-panel">
+               <div id="option">
+                   <span>Please enter zipcode:&nbsp;</span>
+                   <input type="text" ng-model="zipcode" id="zipcode">
+                   <button ng-click="checkWeather()" id="weather-btn">GO</button>
+               </div>
+               <div id="display-panel">
+                   <div id="curr-date">{{ date | date: "EEEE, MMM dd" }}</div>
+                   <div id="temp">
+                       <img ng-src="http://openweathermap.org/img/w/{{icon}}.png" alt="icon">
+                       <span id="weather-condition">{{ condition }}</span>
+                       <span id="weather-temp">{{ temp }}&nbsp;<i class="wi wi-celsius"></i></span> 
+                       <span id="weather-min-max-temp">{{ minTemp }}&nbsp;<i class="wi wi-celsius"></i> / {{ maxTemp }}&nbsp;<i class="wi wi-celsius"></i></span>
+                   </div>
+                   <div id="details">
+                      <div id="wind-hum">
+                           <p><i class="wi wi-strong-wind"></i><span class="weather-details-span">{{windSpeed}}&nbsp;&nbsp;&nbsp;{{windDirection}}</span></p>
+                           <p><i class="wi wi-humidity"></i><span class="weather-details-span">{{ humidity }}</span></p>
+                      </div>
+                       <div id="sun">
+                           <p><i class="wi wi-sunrise"></i><span class="weather-details-span">{{ sunrise }}</span></p>
+                           <p><i class="wi wi-sunset"></i><span class="weather-details-span">{{ sunset }}</span></p>
+                       </div>
+                       
+                   </div>
+               </div>
+           </div>
+        </section>
+        <div class="clearfix"></div>
         <hr>
     </body>
 </html>

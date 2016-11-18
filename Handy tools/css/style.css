@@ -1,6 +1,40 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body{
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    position: relative;
+}
+
 .container{
     width: 1140px;
     margin: 0 auto;
+}
+h1{
+    margin-top: 50px;
+}
+
+h2{
+    margin-bottom: 30px;
+}
+
+.clearfix{
+    clear: both;
+}
+
+section{
+    padding-top: 50px;
 }
 
 #title{
@@ -23,4 +57,95 @@ h1, h2{
 
 #flag-btn{
     margin-top: 10px;
+}
+
+#palindrome-output{
+    height: 20px;
+    margin-bottom: 20px;
+}
+
+/* Weather */
+#weather-panel{
+    width: 100%;
+}
+
+#option{
+    width: 49%;
+    height: 200px;
+    float: left;
+}
+
+#display-panel{
+    width: 49%;
+    height: 200px;
+    float: right;
+}
+
+#details{
+    margin-top: 20px;
+}
+
+#details p{
+    margin-top: 10px;
+}
+
+#details p:first-child{
+    margin-top: 0;
+}
+
+/*#curr-date{
+    text-align: center;
+}*/
+
+#weather-condition, 
+#weather-temp{
+    font-size: 150%;
+    font-weight: bold;
+}
+
+#weather-min-max-temp{
+    font-weight: 100;
+    margin-left: 20px;
+}
+
+#wind-hum{
+    float: left;
+    margin-right: 50px;
+}
+
+#wind-hum i, #sun i{
+    font-size: 150%;
+}
+
+.wi-humidity{
+    color: skyblue;
+}
+
+.wi-sunrise{
+    color: orangered;
+}
+
+.wi-sunset{
+    color: coral;
+}
+
+#zipcode{
+    height: 30px;
+    border-radius: 3px;
+    padding: 5px;
+    border: 1px #ccc solid;
+}
+
+#weather-btn{
+    padding: 5px;
+    cursor: pointer;
+}
+
+.weather-details-span{
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.wi-humidity{
+    margin-left: 15px;
 }
