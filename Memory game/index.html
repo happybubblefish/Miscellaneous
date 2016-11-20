@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Memory card game</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <sricpt src="js/jquery-1.12.4.min.js"></sricpt>
+        <script src="js/angular.js"></script>
+        <script src="js/script.js"></script>
+    </head>
+    <body ng-app="memoApp" >
+          <div class="container" ng-controller="memoCtrl">
+              <div id="memory-cardboard">
+           
+           
+               
+               </div>
+               <div ng-show="msg != null">{{ msg }}</div>
+               <button ng-click="reset()">Play again</button>
+          </div>
+    </body>
+</html>

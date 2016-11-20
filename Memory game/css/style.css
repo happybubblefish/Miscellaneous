@@ -1,0 +1,30 @@
+.container{
+    width: 1080px;
+    margin: 100px auto 0;
+}
+
+.card{
+    border: 2px #000 solid;
+    margin: 5px;
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    background-color: deepskyblue;
+    font-weight: bold;
+    font-size: 300%;
+    text-align: center;
+    position: relative;
+}
+
+.default_value{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#test{
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+}
