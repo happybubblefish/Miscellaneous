@@ -16,8 +16,10 @@
        <div id="version">
            <span>V1.0</span>
        </div>
-        <section class="container" ng-controller="palindromCtrl">
-           <h2>Check palindrome</h2>
+       <!--<hr>-->
+        <section id="section-palindrome" ng-controller="palindromCtrl">
+           <div class="container">
+               <h2>Check palindrome</h2>
             Your input:<br>
             <textarea name="palindrome" ng-model="palindrome" cols="159" rows="5"></textarea><br>
             <div id="flag-btn">
@@ -32,40 +34,43 @@
                 <span ng-show="output != null && output">Yes, your input is palindrome!</span>
                 <span ng-show="output != null && !output">No, your input is NOT palindrome...</span>
             </div>
+           </div>
         </section>
         <div class="clearfix"></div>
-        <hr>
-        <section class="container" ng-controller="weatherCtrl">
-           <h2>Forecast</h2>
-           <div id="weather-panel">
-               <div id="option">
-                   <span>Please enter zipcode:&nbsp;</span>
-                   <input type="text" ng-model="zipcode" id="zipcode">
-                   <button ng-click="checkWeather()" id="weather-btn">GO</button>
-               </div>
-               <div id="display-panel">
-                   <div id="curr-date">{{ date | date: "EEEE, MMM dd" }}</div>
-                   <div id="temp">
-                       <img ng-src="http://openweathermap.org/img/w/{{icon}}.png" alt="icon">
-                       <span id="weather-condition">{{ condition }}</span>
-                       <span id="weather-temp">{{ temp }}&nbsp;<i class="wi wi-celsius"></i></span> 
-                       <span id="weather-min-max-temp">{{ minTemp }}&nbsp;<i class="wi wi-celsius"></i> / {{ maxTemp }}&nbsp;<i class="wi wi-celsius"></i></span>
+        <!--<hr>-->
+        <section class="section-forecast" ng-controller="weatherCtrl">
+          <div class="container">
+               <h2>Forecast</h2>
+               <div id="weather-panel">
+                   <div id="option">
+                       <span>Please enter zipcode:&nbsp;</span>
+                       <input type="text" ng-model="zipcode" id="zipcode">
+                       <button ng-click="checkWeather()" id="weather-btn">GO</button>
                    </div>
-                   <div id="details">
-                      <div id="wind-hum">
-                           <p><i class="wi wi-strong-wind"></i><span class="weather-details-span">{{windSpeed}}&nbsp;&nbsp;&nbsp;{{windDirection}}</span></p>
-                           <p><i class="wi wi-humidity"></i><span class="weather-details-span">{{ humidity }}</span></p>
-                      </div>
-                       <div id="sun">
-                           <p><i class="wi wi-sunrise"></i><span class="weather-details-span">{{ sunrise }}</span></p>
-                           <p><i class="wi wi-sunset"></i><span class="weather-details-span">{{ sunset }}</span></p>
+                   <div id="display-panel">
+                       <div id="curr-date">{{ date | date: "EEEE, MMM dd" }}</div>
+                       <div id="temp">
+                           <img ng-src="http://openweathermap.org/img/w/{{icon}}.png" alt="icon">
+                           <span id="weather-condition">{{ condition }}</span>
+                           <span id="weather-temp">{{ temp }}&nbsp;<i class="wi wi-celsius"></i></span> 
+                           <span id="weather-min-max-temp">{{ minTemp }}&nbsp;<i class="wi wi-celsius"></i> / {{ maxTemp }}&nbsp;<i class="wi wi-celsius"></i></span>
                        </div>
-                       
+                       <div id="details">
+                          <div id="wind-hum">
+                               <p><i class="wi wi-strong-wind"></i><span class="weather-details-span">{{windSpeed}}&nbsp;&nbsp;&nbsp;{{windDirection}}</span></p>
+                               <p><i class="wi wi-humidity"></i><span class="weather-details-span">{{ humidity }}</span></p>
+                          </div>
+                           <div id="sun">
+                               <p><i class="wi wi-sunrise"></i><span class="weather-details-span">{{ sunrise }}</span></p>
+                               <p><i class="wi wi-sunset"></i><span class="weather-details-span">{{ sunset }}</span></p>
+                           </div>
+
+                       </div>
                    </div>
                </div>
            </div>
         </section>
         <div class="clearfix"></div>
-        <hr>
+        <!--<hr>-->
     </body>
 </html>

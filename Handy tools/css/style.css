@@ -96,6 +96,10 @@ h1, h2{
 /*#curr-date{
     text-align: center;
 }*/
+.section-forecast{
+    background-color: #f6f6f6;   
+    height: 350px;
+}
 
 #weather-condition, 
 #weather-temp{
