@@ -14,7 +14,8 @@
             <h1>Guess game II</h1>
             
             Your guess: <input type="text" ng-model="guessedNum">
-            <button ng-click="compare()">Show cards</button><br><br>
+            <button ng-click="compare($event)">Show cards</button><br><br>
+            <span id="errorMsg">{{ errorMsg }}</span><br><br>
             Computer guess: <span>{{ cmpGuess }}</span><br><br>
             Your score: <span>{{ playerScore }}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             Computer score: <span>{{ cmpScore }}</span>
