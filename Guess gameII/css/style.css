@@ -1,0 +1,18 @@
+
+.container{
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.card{
+    border: 3px #aaa solid;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    background-color: deepskyblue;
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 200%;
+    font-weight: bold;
+}

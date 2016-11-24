@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Guess game</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/jquery-1.12.4.min.js"></script>
+        <script src="js/angular.js"></script>
+        <script src="js/script.js"></script>
+    </head>
+    <body ng-app="guessApp">
+        <div class="container" ng-controller="guessCtrl">
+            <h1>Guess game II</h1>
+            
+            Your guess: <input type="text" ng-model="guessedNum">
+            <button ng-click="compare()">Show cards</button><br><br>
+            Computer guess: <span>{{ cmpGuess }}</span><br><br>
+            Your score: <span>{{ playerScore }}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Computer score: <span>{{ cmpScore }}</span>
+            <h3>{{ result }}</h3>
+            <div class="cardBoard">
+                <div class="card" id="0">0</div>
+                <div class="card" id="1">1</div>
+                <div class="card" id="2">2</div>
+                <div class="card" id="3">3</div>
+                <div class="card" id="4">4</div>
+                <div class="card" id="5">5</div>
+                <div class="card" id="6">6</div>
+                <div class="card" id="7">7</div>
+                <div class="card" id="8">8</div>
+                <div class="card" id="9">9</div>
+            </div>
+        </div>
+        
+    </body>
+</html>
