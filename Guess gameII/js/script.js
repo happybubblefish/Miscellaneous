@@ -2,7 +2,7 @@
 
 var app = angular.module("guessApp", []);
 
-app.controller("guessCtrl", function($scope, guessService){
+app.controller("guessCtrl", function($scope, guessService, $window){
     $scope.cmpArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
     var userGuessedArr = [];
     $scope.errorMsg = "";
@@ -66,6 +66,10 @@ app.controller("guessCtrl", function($scope, guessService){
                 }
             }
         }
+    };
+    
+    $scope.reset = function(){
+        $window.location.reload();
     }
     
 })
